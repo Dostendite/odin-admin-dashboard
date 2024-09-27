@@ -1,4 +1,4 @@
-/* Josh W. Comeau's Reset */
+/* Josh W. Comeau's Modern CSS Reset */
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -31,3 +31,30 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 /* Reset end - Thanks John! */
+
+/* :root {} */
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.sidebar {
+    background-color: crimson;
+    grid-column: 1;
+    grid-row: 1 / -1;
+}
+
+.header {
+    background-color: whitesmoke;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.main-content {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: lightgray;
+}
