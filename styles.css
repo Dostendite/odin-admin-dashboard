@@ -35,7 +35,7 @@ p, h1, h2, h3, h4, h5, h6 {
 :root {
     font-size: 10px;
 
-    --sidebar-template-columns: 25px 1fr;
+    --sidebar-template-columns: 50px 1fr;
     --sidebar-control-padding: 25px;
     --sidebar-font-size: 2.4rem;
     --sidebar-control-rows: repeat(6, 50px);
@@ -44,7 +44,7 @@ p, h1, h2, h3, h4, h5, h6 {
 body {
     height: 100vh;
     display: grid;
-    grid-template-columns: minmax(250px, 1fr) 5fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 5fr;
     font-family: Helvetica;
 }
@@ -91,6 +91,20 @@ body {
 .sidebar-control {
     display: grid;
     grid-template-columns: var(--sidebar-template-columns);
+}
+
+.sidebar-control-icon {
+    position: relative;
+    top: 5px;
+    max-width: 25px;
+    fill: white;
+}
+
+.dashboard-icon {
+    position: relative;
+    bottom: 10px;
+    left: -10px;
+    fill: white;
 }
 
 .header {
