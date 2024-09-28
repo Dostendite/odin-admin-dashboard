@@ -35,10 +35,14 @@ p, h1, h2, h3, h4, h5, h6 {
 :root {
     font-size: 10px;
 
+    --small-icon-width: 25px;
+
     --sidebar-template-columns: 50px 1fr;
     --sidebar-control-padding: 25px;
     --sidebar-font-size: 2.4rem;
     --sidebar-control-rows: repeat(6, 50px);
+
+    --header-sides-padding: 0px 125px;
 }
 
 body {
@@ -48,6 +52,16 @@ body {
     grid-template-rows: 1fr 5fr;
     font-family: Helvetica;
 }
+
+img {
+    border-radius: 50%;
+}
+
+.small-icon {
+    max-width: var(--small-icon-width);
+}
+
+/* Sidebar styling */
 
 .sidebar {
     background-color: dodgerblue;
@@ -93,10 +107,13 @@ body {
     grid-template-columns: var(--sidebar-template-columns);
 }
 
+.sidebar-control:hover {
+    cursor: pointer;
+}
+
 .sidebar-control-icon {
     position: relative;
     top: 5px;
-    max-width: 25px;
     fill: white;
 }
 
@@ -107,11 +124,118 @@ body {
     fill: white;
 }
 
+/* Header styling */
+
 .header {
     background-color: whitesmoke;
     grid-column: 2;
     grid-row: 1;
+
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    grid-template-rows: 6fr 8fr;
+
+    padding: var(--header-sides-padding);
 }
+
+.header-search-bar-container {
+    background-color: aqua;
+    grid-column: 1;
+    grid-row: 1;
+
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    align-items: center;
+}
+
+.header-search-bar-container input[type="search"] {
+    align-self: center;
+    width: 80%;
+    background-color: whitesmoke;
+
+    padding: 4px;
+    font-size: 1.4rem;
+    border: 0;
+    border-radius: 15px;
+}
+
+.header-search-icon {
+    justify-self: center;
+}
+
+.header-small-user-bar {
+    background-color: chartreuse;
+
+    display: grid;
+    grid-template-columns: 1fr 75px 75px 150px;
+    place-items: center;
+}
+
+.header-bell-icon {
+    grid-column: 2;
+}
+
+.header-small-user-image {
+    max-width: 50px;
+}
+
+.header-user-name-small {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.header-main-user-bar {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    align-items: center;
+}
+
+.header-main-user-image {
+    grid-column: 1;
+    max-width: 75px;
+}
+
+.header-user-titles {
+    grid-column: 2;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.user-title-small {
+    align-self: end;
+
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.user-title-main {
+    align-self: start;
+
+    font-weight: bold;
+    font-size: 2.4rem;
+}
+
+.header-user-controls {
+    display: grid;
+    justify-content: end;
+    align-content: center;
+    gap: 48px;
+}
+
+.user-controls-button {
+    background-color: dodgerblue;
+    font-weight: bold;
+    color: white;
+    font-size: 1.6rem;
+    border: 0;
+    border-radius: 25px;
+    padding: 8px 32px;
+
+    grid-row: 1;
+}
+
+/* Main content styling */
 
 .main-content {
     grid-column: 2;

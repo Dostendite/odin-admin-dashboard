@@ -2,11 +2,20 @@ Capstone Int. HTML & CSS Project - Admin Dashboard
 <-------------------- <X> ----------------------->
 
 [] Find a theme to style the admin dashboard
-[] Find a color palette
+[] Find a color palette ^
 [] Make variables for the color palette
+
+[] Fix sidebar padding spacings (when setting hover background-color)
 
 [] Choose a favicon
 [] Choose icons for the dashboard elements
+
+After the base layout is finished:
+[] Review the design file again and set shared
+custom properties properly
+# For colors, padding, spacings, etc
+
+[] Add a box-shadow effect to the header & cards
 
 Extras:
 
