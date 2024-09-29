@@ -237,32 +237,67 @@ img {
 
 /* fix */
 .main-content {
-    padding: 25px;
+    padding: 20px 50px 50px 25px;
     grid-column: 2;
     grid-row: 2;
     background-color: lightgray;
 
     display: grid;
-    grid-template-columns: 5fr 2fr;
+    grid-template-columns: 6fr 2fr;
+    grid-template-rows: 50px 1fr 50px 1fr;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.projects-header {
+    grid-row: 1 / 2;
+}
+
+.announcements-header {
+    grid-row: 1 / 2;
+    grid-column: 2;
+}
+
+.trending-header {
+    grid-row: 3;
+    grid-column: 2;
 }
 
 .card-container {
+    grid-row: 2 / -1;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    background-color: crimson;
     gap: 25px;
+    margin-right: 25px;
+}
+
+.card {
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
 }
 
 .main-card {
-    background-color: white;
-    font-size: 2rem;
-    border-radius: 8px;
-    border-left: 8px solid aqua;
-    max-height: 250px;
+
+    border-left: 8px solid orange;
+    max-height: 225px;
 }
 
+.card-title {
+    font-weight: bold;
+    font-size: 2.4rem;
+}
 
+.card-info {
+    color: gray;
+    font-size: 1.6rem;
+}
 
-.secondary-container {
-    background-color: aquamarine;
+.announcements-card {
+    margin-bottom: 25px;
+}
+
+.trending-card {
 }
