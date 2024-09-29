@@ -163,7 +163,6 @@ img {
 }
 
 .header-small-user-bar {
-
     display: grid;
     grid-template-columns: 1fr 75px 75px 150px;
     place-items: center;
@@ -173,7 +172,7 @@ img {
     grid-column: 2;
 }
 
-.header-small-user-image {
+.small-user-image {
     max-width: 50px;
 }
 
@@ -247,6 +246,8 @@ img {
     grid-template-rows: 50px 1fr 50px 1fr;
 }
 
+/* Main content headers styling */
+
 h2 {
     font-size: 2rem;
 }
@@ -265,6 +266,8 @@ h2 {
     grid-column: 2;
 }
 
+/* Card container styling */
+
 .card-container {
     grid-row: 2 / -1;
     display: grid;
@@ -274,13 +277,12 @@ h2 {
 }
 
 .card {
-    padding: 15px;
+    padding: 25px;
     background-color: white;
     border-radius: 8px;
 }
 
 .main-card {
-
     border-left: 8px solid orange;
     max-height: 225px;
 }
@@ -295,9 +297,59 @@ h2 {
     font-size: 1.6rem;
 }
 
+/* Announcements card styling */
+
 .announcements-card {
     margin-bottom: 25px;
+
+    display: grid;
+    grid-template-rows: auto 25px auto 25px auto;
+
+    justify-items: center;
+    justify-content: center;
 }
 
+.announcement-title {
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.announcement-info {
+    font-size: 1.2rem;
+    color: gray;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid lightgray;
+    width: 100%;
+}
+
+/* Trending card styling */
+
 .trending-card {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.trending-user-container {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 25px;
+}
+
+.trending-user-container .small-user-image {
+}
+
+.trending-user-titles {
+}
+
+.trending-user-title {
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.trending-user-subtitle {
+    font-size: 1.2rem;
+    color: gray;
 }
