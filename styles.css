@@ -42,7 +42,7 @@ p, h1, h2, h3, h4, h5, h6 {
     --sidebar-font-size: 2.4rem;
     --sidebar-control-rows: repeat(6, 50px);
 
-    --header-padding: 10px 125px;
+    --header-padding: 10px 75px;
 }
 
 body {
