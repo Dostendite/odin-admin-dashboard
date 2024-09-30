@@ -87,6 +87,9 @@ body {
 }
 
 img {
+    user-select: none;
+   -webkit-user-select: none;
+   -webkit-user-drag: none;
     border-radius: 50%;
 }
 
@@ -109,7 +112,7 @@ img {
     background-color: var(--main-blue);
     color: var(--white);
     font-size: var(--sidebar-font-size);
-    font-weight: var(--medium-font-weight);
+    font-weight: var(--light-bold-font-weight);
 
     grid-column: 1;
     grid-row: 1 / -1;
@@ -289,10 +292,14 @@ img {
 }
 
 .user-controls-button:hover {
-    background-color: var(--dark-blue);
+    background-color: var(--light-blue);
 
     cursor: pointer;
     transition: 100ms all;
+}
+
+.user-controls-button:active {
+    background-color: var(--dark-blue-three);
 }
 
 /* Main content styling */
