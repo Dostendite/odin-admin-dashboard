@@ -76,12 +76,15 @@ p, h1, h2, h3, h4, h5, h6 {
     --light-bold-font-weight: 500;
     --medium-font-weight: 400;
     --light-font-weight: 300;
+
+    /* Animations & transitions */
+    --transition-duration: 100ms all;
 }
 
 body {
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: minmax(275px, 1fr) 5fr;
     grid-template-rows: 1fr 4fr;
     font-family: "Lexend", sans-serif;
 }
@@ -117,7 +120,6 @@ img {
     grid-column: 1;
     grid-row: 1 / -1;
 
-
     display: grid;
     grid-template-rows: 1fr 4fr 4fr 8fr;
     gap: 20px;
@@ -131,8 +133,11 @@ img {
 
 .dashboard-title {
     display: grid;
+    background-color: var(--black);
     grid-template-columns: var(--sidebar-template-columns);
     font-family: "BM Space";
+    font-size: calc(var(--sidebar-font-size) + 0.6rem);
+    padding-bottom: 16px;
 }
 
 .sidebar-controls {
@@ -150,12 +155,16 @@ img {
 }
 
 .sidebar-control {
+    transition: var(--transition-duration);
+
     display: grid;
     grid-template-columns: var(--sidebar-template-columns);
 }
 
 .sidebar-control:hover {
     cursor: pointer;
+    /* background-color: var(--dark-blue-two); */
+    transition: var(--transition-duration);
 }
 
 .sidebar-control-icon {
@@ -280,6 +289,7 @@ img {
     background-color: var(--main-blue);
     color: var(--white);
     font-weight: var(--light-bold-font-weight);
+    transition: var(--transition-duration);
 
     font-size: 1.6rem;
     border: 0;
@@ -288,14 +298,13 @@ img {
 
     grid-row: 1;
 
-    transition: 100ms all;
+
 }
 
 .user-controls-button:hover {
     background-color: var(--light-blue);
-
+    transition: var(--transition-duration);
     cursor: pointer;
-    transition: 100ms all;
 }
 
 .user-controls-button:active {
@@ -389,8 +398,9 @@ h2 {
 }
 
 .card-icon:hover {
+    transition: var(--transition-duration);
+
     cursor: pointer;
-    transition: 100ms all;
     transform: scale(0.9);
 }
 
