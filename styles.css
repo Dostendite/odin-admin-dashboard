@@ -69,7 +69,7 @@ p, h1, h2, h3, h4, h5, h6 {
     --dark-blue: #03178C;
     --dark-blue-two: #080c2f;
     --dark-blue-three: #010326;
-    --main-crimson: #D92344;
+    --main-orange: #FC8E0F;
 
     /* Font weights */
     --bold-font-weight: 600;
@@ -162,14 +162,19 @@ img {
 }
 
 .sidebar-control:hover {
+    color: var(--black);
     cursor: pointer;
-    /* background-color: var(--dark-blue-two); */
     transition: var(--transition-duration);
+}
+
+.sidebar-control:hover .sidebar-control-icon {
+    fill: var(--black);
+    transition: var(--transition-duration);
+    
 }
 
 .sidebar-control-icon {
     fill: var(--white);
-
     position: relative;
     top: 5px;
 }
@@ -364,7 +369,7 @@ h2 {
 }
 
 .project-card {
-    border-left: 8px solid var(--main-crimson);
+    border-left: 8px solid var(--main-orange);
     max-height: 225px;
 
     display: grid;
