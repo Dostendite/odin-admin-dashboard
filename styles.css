@@ -64,12 +64,18 @@ p, h1, h2, h3, h4, h5, h6 {
     --gray: #757575;
     --dark-gray: #404040;
 
-    --light-blue: ##13C9F2;
+    --light-blue: #13C9F2;
     --main-blue: #0fb1f5;
     --dark-blue: #03178C;
     --dark-blue-two: #080c2f;
     --dark-blue-three: #010326;
     --main-crimson: #D92344;
+
+    /* Font weights */
+    --bold-font-weight: 600;
+    --light-bold-font-weight: 500;
+    --medium-font-weight: 400;
+    --light-font-weight: 300;
 }
 
 body {
@@ -102,12 +108,12 @@ img {
 .sidebar {
     background-color: var(--main-blue);
     color: var(--white);
+    font-size: var(--sidebar-font-size);
+    font-weight: var(--medium-font-weight);
 
     grid-column: 1;
     grid-row: 1 / -1;
 
-    font-size: var(--sidebar-font-size);
-    font-weight: bold;
 
     display: grid;
     grid-template-rows: 1fr 4fr 4fr 8fr;
@@ -122,8 +128,8 @@ img {
 
 .dashboard-title {
     display: grid;
-    font-family: "BM Space";
     grid-template-columns: var(--sidebar-template-columns);
+    font-family: "BM Space";
 }
 
 .sidebar-controls {
@@ -168,6 +174,8 @@ img {
 
 .header {
     background-color: var(--light-gray);
+    padding: var(--header-padding);
+    box-shadow: var(--standard-box-shadow);
 
     z-index: 1;
     grid-column: 2;
@@ -177,10 +185,6 @@ img {
     grid-template-columns: 4fr 3fr;
     grid-template-rows: 6fr 8fr;
     gap: 10px;
-
-    padding: var(--header-padding);
-    box-shadow: var(--standard-box-shadow);
-
 }
 
 .header-search-bar-container {
@@ -226,7 +230,7 @@ img {
 }
 
 .header-user-name-small {
-    font-weight: bold;
+    font-weight: var(--light-bold-font-weight);
     font-size: 2rem;
 }
 
@@ -249,16 +253,16 @@ img {
 }
 
 .user-title-small {
-    align-self: end;
+    font-weight: var(--medium-font-weight);
 
-    font-weight: bold;
+    align-self: end;
     font-size: 1.6rem;
 }
 
 .user-title-main {
-    align-self: start;
+    font-weight: var(--light-bold-font-weight);
 
-    font-weight: bold;
+    align-self: start;
     font-size: 2.4rem;
 }
 
@@ -272,8 +276,8 @@ img {
 .user-controls-button {
     background-color: var(--main-blue);
     color: var(--white);
+    font-weight: var(--light-bold-font-weight);
 
-    font-weight: bold;
     font-size: 1.6rem;
     border: 0;
     border-radius: 25px;
@@ -285,8 +289,9 @@ img {
 }
 
 .user-controls-button:hover {
-    cursor: pointer;
     background-color: var(--dark-blue);
+
+    cursor: pointer;
     transition: 100ms all;
 }
 
@@ -307,6 +312,7 @@ img {
 /* Main content headers styling */
 
 h2 {
+    font-weight: var(--bold-font-weight);
     font-size: 2rem;
 }
 
@@ -350,11 +356,12 @@ h2 {
 }
 
 .card-title {
-    font-weight: bold;
+    font-weight: var(--light-bold-font-weight);
     font-size: 2.4rem;
 }
 
 .card-info {
+    font-weight: var(--light-font-weight);
     color: gray;
     font-size: 1.6rem;
 }
@@ -393,13 +400,14 @@ h2 {
 }
 
 .announcement-title {
-    font-weight: bold;
+    font-weight: var(--light-bold-font-weight);
     font-size: 1.6rem;
 }
 
 .announcement-info {
+    color: var(--gray);
+    font-weight: var(--light-font-weight);
     font-size: 1.2rem;
-    color: gray;
 }
 
 hr {
@@ -433,11 +441,13 @@ hr {
 }
 
 .trending-user-title {
-    font-weight: bold;
+    font-weight: var(--light-bold-font-weight);
     font-size: 1.8rem;
 }
 
 .trending-user-subtitle {
+    font-weight: var(--light-font-weight);
+
     font-size: 1.6rem;
     color: gray;
 }
