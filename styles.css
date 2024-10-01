@@ -148,8 +148,8 @@ img:hover {
     display: grid;
     /* background-color: var(--dark-blue-three); */
     grid-template-columns: var(--sidebar-template-columns);
-    font-family: "BM Space";
     font-size: calc(var(--sidebar-font-size) + 0.6rem);
+    font-family: "BM Space";
     padding-bottom: 16px;
 }
 
@@ -168,17 +168,16 @@ img:hover {
 }
 
 .sidebar-control {
-    transition: 0ms all;
-
-
+    transition: var(--transition-duration);
+    
     display: grid;
     grid-template-columns: var(--sidebar-template-columns);
 }
 
 .sidebar-control:hover {
-    color: var(--white);
     background-color: var(--dark-blue-three);
-    transition: 0ms all;
+    color: var(--white);
+    transition: var(--transition-duration);
 
     cursor: pointer;
     position: relative;
@@ -186,7 +185,7 @@ img:hover {
 
 .sidebar-control:hover::before {
     background-color: var(--dark-blue-three);
-    transition: 0ms all;
+    transition: var(--transition-duration);
 
     content: " ";
     width: 50px;
@@ -197,10 +196,10 @@ img:hover {
 
 .sidebar-control:hover .sidebar-control-icon {
     transition: var(--transition-duration);
+    fill: var(--white);
+
     transform: scale(1.25);
     top: 10px;
-
-    fill: var(--white);
 }
 
 .sidebar-control:hover .sidebar-button {
@@ -225,9 +224,9 @@ img:hover {
 /* Header styling */
 
 .header {
+    box-shadow: var(--standard-box-shadow);
     background-color: var(--light-gray);
     padding: var(--header-padding);
-    box-shadow: var(--standard-box-shadow);
 
     z-index: 1;
     grid-column: 2;
@@ -260,14 +259,15 @@ img:hover {
 }
 
 .header-search-icon {
-    justify-self: center;
     transition: var(--transition-duration);
+    justify-self: center;
 }
 
 .header-search-icon:hover {
-    cursor: pointer;
-    transform: scale(1.1);
     transition: var(--transition-duration);
+    transform: scale(1.1);
+
+    cursor: pointer;
 }
 
 .header-small-user-info {
@@ -277,14 +277,15 @@ img:hover {
 }
 
 .header-bell-icon {
-    grid-column: 2;
     transition: var(--transition-duration);
+    grid-column: 2;
 }
 
 .header-bell-icon:hover {
-    cursor: pointer;
-    transform: scale(1.1) rotate(8deg);
     transition: var(--transition-duration);
+    transform: scale(1.1) rotate(8deg);
+
+    cursor: pointer;
 }
 
 .small-user-image {
@@ -361,7 +362,6 @@ img:hover {
 
 /* Main content styling */
 
-/* fix */
 .main-content {
     padding: 20px 50px 50px 25px;
     grid-column: 2;
@@ -371,7 +371,7 @@ img:hover {
     grid-template-columns: 3fr 375px;
     grid-template-rows: 40px 375px 40px 375px;
 
-    overflow: scroll;
+    overflow: auto;
 }
 
 /* Main content headers styling */
@@ -406,19 +406,21 @@ h2 {
 }
 
 .card {
-    padding: 20px;
     background-color: var(--white);
-    border-radius: 8px;
     box-shadow: var(--standard-box-shadow);
+
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .project-card {
     border-left: 8px solid var(--main-orange);
+    transition: var(--transition-duration);
+
     max-height: 225px;
 
     display: grid;
     grid-template-rows: 50px 100px auto;
-    transition: var(--transition-duration);
 }
 
 .project-card:hover {
@@ -454,8 +456,8 @@ h2 {
 
 .card-icon:hover {
     transition: var(--transition-duration);
-
     fill: var(--main-orange);
+
     cursor: pointer;
     transform: scale(0.9);
 }
@@ -484,6 +486,7 @@ h2 {
 .announcement-info {
     color: var(--gray);
     font-weight: var(--light-font-weight);
+
     font-size: 1.2rem;
 }
 
