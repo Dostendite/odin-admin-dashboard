@@ -19,11 +19,11 @@
 }
 
 html {
-    background-color: var(--dark-blue-two);
 }
 
 body {
     color: #0a0a0a;
+    background-color: lightgray;
 
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -366,11 +366,12 @@ img:hover {
     padding: 20px 50px 50px 25px;
     grid-column: 2;
     grid-row: 2;
-    background-color: lightgray;
 
     display: grid;
     grid-template-columns: 3fr 375px;
     grid-template-rows: 40px 375px 40px 375px;
+
+    overflow: scroll;
 }
 
 /* Main content headers styling */
