@@ -168,7 +168,7 @@ img:hover {
 }
 
 .sidebar-control {
-    transition: var(--transition-duration);
+    transition: 0ms all;
     
     display: grid;
     grid-template-columns: var(--sidebar-template-columns);
@@ -177,16 +177,16 @@ img:hover {
 .sidebar-control:hover {
     background-color: var(--dark-blue-three);
     color: var(--white);
-    transition: var(--transition-duration);
 
+    transition: 0ms all;
     cursor: pointer;
     position: relative;
 }
 
 .sidebar-control:hover::before {
     background-color: var(--dark-blue-three);
-    transition: var(--transition-duration);
 
+    transition: 0ms all;
     content: " ";
     width: 50px;
     height: 50px;
@@ -195,15 +195,15 @@ img:hover {
 }
 
 .sidebar-control:hover .sidebar-control-icon {
-    transition: var(--transition-duration);
     fill: var(--white);
 
+    transition: 0ms all;
     transform: scale(1.25);
     top: 10px;
 }
 
 .sidebar-control:hover .sidebar-button {
-    transition: var(--transition-duration);
+    transition: 0ms all;
     letter-spacing: 2px;
 }
 
