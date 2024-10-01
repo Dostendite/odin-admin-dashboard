@@ -153,6 +153,12 @@ img:hover {
     padding-bottom: 16px;
 }
 
+.dashboard-title-text {
+    min-width: min-content;
+    font-weight: normal;
+    font-size: 3rem;
+}
+
 .sidebar-controls {
     display: grid;
 }
