@@ -70,9 +70,8 @@ p, h1, h2, h3, h4, h5, h6 {
 
     --light-blue: #13C9F2;
     --main-blue: #0fb1f5;
-    --dark-blue: #03178C;
-    --dark-blue-two: #080c2f;
-    --dark-blue-three: #010326;
+    --main-blue-two: #0090cc;
+    --main-blue-three: #036b96;
     --main-orange: #FC8E0F;
     --main-red: #D60000;
 
@@ -145,10 +144,10 @@ img:hover {
 }
 
 .dashboard-title {
-    display: grid;
-    /* background-color: var(--dark-blue-three); */
-    grid-template-columns: var(--sidebar-template-columns);
+    background-color: var(--main-blue-two);
     font-size: calc(var(--sidebar-font-size) + 0.6rem);
+    display: grid;
+    grid-template-columns: var(--sidebar-template-columns);
     font-family: "BM Space";
     padding-bottom: 16px;
 }
@@ -178,10 +177,12 @@ img:hover {
     
     display: grid;
     grid-template-columns: var(--sidebar-template-columns);
+
+    user-select: none;
 }
 
 .sidebar-control:hover {
-    background-color: var(--dark-blue-three);
+    background-color: var(--main-blue-two);
     color: var(--white);
 
     transition: 0ms all;
@@ -190,7 +191,7 @@ img:hover {
 }
 
 .sidebar-control:hover::before {
-    background-color: var(--dark-blue-three);
+    background-color: var(--main-blue-two);
 
     transition: 0ms all;
     content: " ";
@@ -354,6 +355,7 @@ img:hover {
     padding: 8px 32px;
 
     grid-row: 1;
+    user-select: none;
 }
 
 .user-controls-button:hover {
@@ -363,7 +365,8 @@ img:hover {
 }
 
 .user-controls-button:active {
-    background-color: var(--dark-blue-two);
+    background-color: var(--main-blue-three);
+    transition: none;
 }
 
 /* Main content styling */
