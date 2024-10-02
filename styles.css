@@ -179,6 +179,7 @@ img:hover {
     grid-template-columns: var(--sidebar-template-columns);
 
     user-select: none;
+    align-items: center;
 }
 
 .sidebar-control:hover {
@@ -216,8 +217,6 @@ img:hover {
 
 .sidebar-control-icon {
     fill: var(--white);
-    position: relative;
-    top: 8px;
 }
 
 .dashboard-icon {
